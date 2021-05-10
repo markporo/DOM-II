@@ -68,6 +68,7 @@ funDiv.onwheel = scaler;
 let scale = 1;
 
 function scaler(e) {
+    // * [ ] Nest two similar events somewhere in the site and prevent the event propagation properly. Remember not all event types bubble.
     e.preventDefault();
 
     scale += e.deltaY * -0.01;
@@ -77,3 +78,35 @@ function scaler(e) {
     funDiv.style.transform = `scale(${scale})`;
 
 }
+
+//9.  blur
+
+const input2 = document.querySelector("#input2");
+
+input.addEventListener('blur', (e) => {
+    e.target.style.background = '';
+});
+
+//10. keyup on the enter key
+
+
+window.addEventListener("keyup", e => {
+
+    console.log(e.code);
+    if (e.code === "Enter") {
+        document.body.style.backgroundColor = "yellow";
+    }
+});
+
+
+// [ ] Stop the navigation items from refreshing the page by using `preventDefault()`
+const navLink = document.querySelectorAll("#nav-link");
+
+navLink.forEach(function (link) {
+
+    link.addEventListener('click', function (e) {
+        //preventDefault();
+        console.log(e);
+    });
+
+});
