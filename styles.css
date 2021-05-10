@@ -1,0 +1,48 @@
+.logo-heading {
+  color: rgb(255, 195, 127);
+}
+
+.animateTitle {
+  animation-name: busTitle;
+  animation-duration: 7s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.center {
+  text-align: center;
+}
+
+.largerText {
+  font-size: 4.5rem;
+}
+
+@keyframes busTitle {
+  0% {
+    text-align: center;
+  }
+  50% {
+    color: #ffd801;
+
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 4.5rem;
+  }
+}
+
+#outsideDiv {
+  min-height: 50vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#innerDiv {
+  width: 100px;
+  height: 100px;
+  background: rgb(238, 228, 175);
+  padding: 10px;
+}
